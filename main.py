@@ -59,10 +59,10 @@ active = st.sidebar.selectbox(
 )
 
 # --- CONVERT CATEGORICAL TO NUMBERS AND STORE WITH INPUT DATA ---
-gender_val = 1 if gender_text == 'Male' else 0
-smoke_val = 1 if smoke_text == 'Smoker' else 0
-alco_val = 1 if alco_text == 'Yes' else 0
-active_val = 1 if active_text == 'Active' else 0
+gender_val = 1 if gender == 'Male' else 0
+smoke_val = 1 if smoke == 'Smoker' else 0
+alco_val = 1 if alco == 'Yes' else 0
+active_val = 1 if active == 'Active' else 0
 
 # Create the final encoded input DataFrame matching your model's expected features
 input_df = pd.DataFrame({
