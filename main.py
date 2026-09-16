@@ -58,26 +58,6 @@ active = st.sidebar.selectbox(
     format_func=lambda x: 'Inactive (0)' if x == 0 else 'Active (1)',
 )
 
-
-## 3. Streamlit input widgets for the specified columns
-# We capture user input using clear labels or text options
-age_years = st.sidebar.slider(
-    'Age(Years)',
-    min_value=29.56,
-    max_value=64.92,
-    value=50.0,
-    step=0.1,
-    help='Patient age in years',
-)
-
-gender_text = st.sidebar.selectbox('Gender', options=['Female', 'Male'])
-smoke_text = st.sidebar.selectbox('Smoking Status', options=['Non-Smoker', 'Smoker'])
-alco_text = st.sidebar.selectbox('Alcohol Intake', options=['No', 'Yes'])
-active_text = st.sidebar.selectbox(
-    'Physical Activity', options=['Inactive', 'Active']
-)
-
-
 # --- CONVERT CATEGORICAL TO NUMBERS AND STORE WITH INPUT DATA ---
 gender_val = 1 if gender_text == 'Male' else 0
 smoke_val = 1 if smoke_text == 'Smoker' else 0
